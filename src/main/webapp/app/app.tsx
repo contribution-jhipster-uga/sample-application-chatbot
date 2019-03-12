@@ -2,6 +2,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import './app.scss';
 
 import React from 'react';
+import { Widget } from 'rasa-webchat';
 import { connect } from 'react-redux';
 import { Card } from 'reactstrap';
 import { HashRouter as Router } from 'react-router-dom';
@@ -51,6 +52,26 @@ export class App extends React.Component<IAppProps> {
               </ErrorBoundary>
             </Card>
             <Footer />
+            <Widget
+              interval={2000}
+              initPayload={'/get_started'}
+              socketUrl={'http://localhost:5002'}
+              socketPath={'/socket.io/'}
+              title={'JHipster Chatbot'}
+              inputTextFieldHint={'Type a message...'}
+              connectingText={'Waiting for server...'}
+              embedded={false}
+              hideWhenNotConnected
+              params={{
+                images: {
+                  dims: {
+                    width: 300,
+                    height: 200
+                  }
+                },
+                storage: 'local'
+              }}
+            />
           </div>
         </div>
       </Router>
