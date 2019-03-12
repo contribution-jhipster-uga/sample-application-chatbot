@@ -23,6 +23,18 @@ export class Home extends React.Component<IHomeProp> {
         <Col md="9">
           <h2>Welcome, Java Hipster!</h2>
           <p className="lead">This is your homepage</p>
+          <p>
+            To launch the bot go to the bot folder and run 'make action-server' and then 'make run'. For more information go check the
+            documentation{' '}
+            <a href="https://rasa.com/docs/" target="_blank">
+              here
+            </a>
+            . The bot available here is the bot from the{' '}
+            <a href="https://github.com/RasaHQ/starter-pack-rasa-stack" target="_blank">
+              starter pack
+            </a>
+            .
+          </p>
           {account && account.login ? (
             <div>
               <Alert color="success">You are logged in as user {account.login}.</Alert>
