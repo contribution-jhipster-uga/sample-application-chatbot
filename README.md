@@ -1,4 +1,14 @@
-# jhipster
+# Sample Application Chatbot
+
+This is a sample application using the module generator-jhipster-chatbot-rasa. The generator as already been run so that the interface is already integrated. You can find a bot to launch in the bot folder, just go into it and run
+```bash
+make action-server
+```
+and
+```bash
+make run
+```
+Now the bot is running and you can start the application by following the instructions below.
 
 This application was generated using JHipster 5.8.2, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v5.8.2](https://www.jhipster.tech/documentation-archive/v5.8.2).
 
